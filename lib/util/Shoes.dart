@@ -16,15 +16,15 @@ class Shoes extends StatelessWidget {
       child: Container(
         width: 310,
         decoration: BoxDecoration(
-          color: Colors.grey[300],
+          color: Colors.deepOrange,
           borderRadius: BorderRadius.circular(15)
         ),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
-            Image.asset(shoe.pathImage,width: 250,),
+            Image.asset(shoe.pathImage,width: 200,),
             SizedBox(
-              height: 30,
+              height: 20,
             ),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 20.0),
@@ -32,7 +32,7 @@ class Shoes extends StatelessWidget {
                 alignment: Alignment.topLeft,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: Text(shoe.describtion,style: TextStyle(fontSize: 10,color: const Color.fromARGB(255, 114, 114, 114)),),
+                  child: Text(shoe.describtion,style: TextStyle(fontSize: 10,color: Colors.white),),
                 )),
             ),
             Row(
@@ -42,8 +42,8 @@ class Shoes extends StatelessWidget {
                                 padding: const EdgeInsets.symmetric(horizontal: 20.0),
                   child: Column(
                     children: [
-                      Text(shoe.nom,style: TextStyle(fontSize: 19,fontWeight: FontWeight.bold),),
-                      Text(shoe.price.toString()),
+                      Text(shoe.nom,style: TextStyle(fontSize: 19,fontWeight: FontWeight.bold,color: Colors.black),),
+                      Text(shoe.price.toString()+' \$',style: TextStyle(fontSize: 19,fontWeight: FontWeight.bold)),
                   
                     ],
                   ),
@@ -56,7 +56,7 @@ class Shoes extends StatelessWidget {
                     height: 70,
                     width: 60,
                     decoration: BoxDecoration(
-                      color: Colors.black,
+                      color: Colors.grey,
                       borderRadius: BorderRadius.only(topLeft: Radius.circular(12),bottomRight:Radius.circular(12) )
                     ),
                     child: Center(

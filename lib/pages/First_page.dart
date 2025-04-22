@@ -23,13 +23,14 @@ class _HomepageState extends State<Homepage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.grey[900],
         leading: Builder(
           builder:
               (context) => IconButton(
                 onPressed: () {
                   Scaffold.of(context).openDrawer();
                 },
-                icon: Icon(Icons.menu),
+                icon: Icon(Icons.menu,color: Colors.white,),
               ),
         ),
       ),
@@ -47,12 +48,12 @@ class _HomepageState extends State<Homepage> {
                     backgroundImage: AssetImage('assets/img/R.png'),
                   ),
                 ),
-                SizedBox(height: 50),
+                SizedBox(height: 10),
                 ListTile(
-                  leading: Icon(Icons.home, color: Colors.white, size: 30),
+                  leading: Icon(Icons.home, color: Colors.white, size: 20),
                   title: Text(
                     'Home',
-                    style: TextStyle(color: Colors.white, fontSize: 19),
+                    style: TextStyle(color: Colors.white, fontSize: 17),
                   ),
                   onTap: () {
                     Navigator.pop(context); // Close drawer
@@ -63,11 +64,11 @@ class _HomepageState extends State<Homepage> {
                   leading: Icon(
                     Icons.shopping_cart,
                     color: Colors.white,
-                    size: 30,
+                    size: 20,
                   ),
                   title: Text(
                     'Cart',
-                    style: TextStyle(color: Colors.white, fontSize: 19),
+                    style: TextStyle(color: Colors.white, fontSize: 17),
                   ),
                   onTap: () {
                     Navigator.pop(context);
@@ -75,10 +76,10 @@ class _HomepageState extends State<Homepage> {
                   },
                 ),
                 ListTile(
-                  leading: Icon(Icons.settings, color: Colors.white, size: 30),
+                  leading: Icon(Icons.settings, color: Colors.white, size: 20),
                   title: Text(
                     'Settings',
-                    style: TextStyle(color: Colors.white, fontSize: 19),
+                    style: TextStyle(color: Colors.white, fontSize: 17),
                   ),
                   onTap: () {
                     Navigator.pop(context);
@@ -89,10 +90,10 @@ class _HomepageState extends State<Homepage> {
               ],
             ),
             ListTile(
-                  leading: Icon(Icons.logout, color: Colors.white, size: 30),
+                  leading: Icon(Icons.logout, color: Colors.white, size: 20),
                   title: Text(
                     'Logout',
-                    style: TextStyle(color: Colors.white, fontSize: 19),
+                    style: TextStyle(color: Colors.white, fontSize: 17),
                   ),
                   onTap: () {
                     Navigator.pop(context);
@@ -103,6 +104,7 @@ class _HomepageState extends State<Homepage> {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.grey[900],
         onTap: (index) {
           toggleWidget(index);
         },

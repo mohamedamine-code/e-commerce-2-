@@ -18,11 +18,12 @@ class _cart_pageState extends State<cart_page> {
       Provider.of<Cart>(context,listen: false).delate_item(x);
     }
     return Consumer<Cart>(builder: (context,value,child)=>Scaffold(
+      backgroundColor: Colors.grey[900],
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15.0),
         child: Column(
           children: [
-            Text('Cart',style: TextStyle(fontSize: 35,fontWeight: FontWeight.bold),),
+            Text('Cart',style: TextStyle(color:Colors.white,fontSize: 35,fontWeight: FontWeight.bold),),
             Expanded(child: ListView.builder(
               itemCount: value.getshop_cart().length,
               itemBuilder:(context,index)=>shoe_cart(
