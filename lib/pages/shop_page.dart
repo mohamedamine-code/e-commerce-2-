@@ -96,6 +96,7 @@ class _shop_pageState extends State<shop_page> {
                     shoe: value.get_Gmaes()[index],
                     additem:(){
                       additem(value.get_Gmaes()[index]);
+                      Widget_alert();
                     } ,
                   );
                 }),
